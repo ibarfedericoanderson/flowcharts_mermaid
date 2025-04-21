@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramas de Flujo: Metodologías del Diseño Industrial</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        @media print {
+            body {
+                width: 100%;
+            }
+        }
+        .mermaid {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-indigo-700 mb-4">Diagramas de Flujo: Metodologías del Diseño Industrial</h1>
+            <p class="text-xl text-gray-600">Una colección de diagramas de flujo de las principales metodologías del diseño industrial</p>
+        </header>
+
+        <div class="flex flex-col lg:flex-row gap-6 mb-12">
+            <nav class="lg:w-1/4 p-4 bg-white rounded-lg shadow-md sticky top-4 h-min">
+                <h2 class="text-2xl font-bold text-indigo-600 mb-4">Índice</h2>
+                <ul class="space-y-2">
+                    <li class="font-semibold text-lg">
+                        <a href="#autores" class="text-indigo-600 hover:underline">A. Autores Teóricos</a>
+                        <ul class="pl-4 mt-2 space-y-1 text-base font-normal">
+                            <li><a href="#a1" class="text-gray-600 hover:text-indigo-500">A1. Morris Asimow (1962)</a></li>
+                            <li><a href="#a2" class="text-gray-600 hover:text-indigo-500">A2. Bruce Archer (1965)</a></li>
+                            <li><a href="#a3" class="text-gray-600 hover:text-indigo-500">A3. Edward Krick (1969)</a></li>
+                            <li><a href="#a4" class="text-gray-600 hover:text-indigo-500">A4. Herbert Simon (1969)</a></li>
+                            <li><a href="#a5" class="text-gray-600 hover:text-indigo-500">A5. Abraham Moles (1969–1972)</a></li>
+                            <li><a href="#a6" class="text-gray-600 hover:text-indigo-500">A6. Christopher Jones (1970)</a></li>
+                            <li><a href="#a7" class="text-gray-600 hover:text-indigo-500">A7. Victor Papanek (1971)</a></li>
+                            <li><a href="#a8" class="text-gray-600 hover:text-indigo-500">A8. Horst Rittel (1970s)</a></li>
+                            <li><a href="#a9" class="text-gray-600 hover:text-indigo-500">A9. Gui Bonsiepe (1978)</a></li>
+                            <li><a href="#a10" class="text-gray-600 hover:text-indigo-500">A10. Jordi Llovet (1979)</a></li>
+                            <li><a href="#a11" class="text-gray-600 hover:text-indigo-500">A11. Bernd Löbach (1981)</a></li>
+                            <li><a href="#a12" class="text-gray-600 hover:text-indigo-500">A12. Bruno Munari (1981)</a></li>
+                            <li><a href="#a13" class="text-gray-600 hover:text-indigo-500">A13. Don Norman (1988)</a></li>
+                            <li><a href="#a14" class="text-gray-600 hover:text-indigo-500">A14. Oscar Olea y Carlos González (1995)</a></li>
+                            <li><a href="#a15" class="text-gray-600 hover:text-indigo-500">A15. Klaus Krippendorff (2006)</a></li>
+                            <li><a href="#a16" class="text-gray-600 hover:text-indigo-500">A16. Nigel Cross (2006)</a></li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold text-lg mt-4">
+                        <a href="#metodologias" class="text-indigo-600 hover:underline">B. Metodologías Generales</a>
+                        <ul class="pl-4 mt-2 space-y-1 text-base font-normal">
+                            <li><a href="#b1" class="text-gray-600 hover:text-indigo-500">B1. TRIZ (1946)</a></li>
+                            <li><a href="#b2" class="text-gray-600 hover:text-indigo-500">B2. Método SCAMPER (1971)</a></li>
+                            <li><a href="#b3" class="text-gray-600 hover:text-indigo-500">B3. Diseño Universal (1970s-1990s)</a></li>
+                            <li><a href="#b4" class="text-gray-600 hover:text-indigo-500">B4. Human-Centered Design (1980s-1990s)</a></li>
+                            <li><a href="#b5" class="text-gray-600 hover:text-indigo-500">B5. Diseño Sostenible (1980s-1990s)</a></li>
+                            <li><a href="#b6" class="text-gray-600 hover:text-indigo-500">B6. Ecodiseño (1990s)</a></li>
+                            <li><a href="#b7" class="text-gray-600 hover:text-indigo-500">B7. Biomímesis (1997)</a></li>
+                            <li><a href="#b8" class="text-gray-600 hover:text-indigo-500">B8. Design Thinking (2000s)</a></li>
+                            <li><a href="#b9" class="text-gray-600 hover:text-indigo-500">B9. Diseño Sistémico (2000s)</a></li>
+                            <li><a href="#b10" class="text-gray-600 hover:text-indigo-500">B10. Diseño Ágil (2010s)</a></li>
+                            <li><a href="#b11" class="text-gray-600 hover:text-indigo-500">B11. Diseño Inclusivo (2010s)</a></li>
+                            <li><a href="#b12" class="text-gray-600 hover:text-indigo-500">B12. Diseño Circular (2010s)</a></li>
+                        </ul>
+                    </li>
+                    <li class="font-semibold text-lg mt-4">
+                        <a href="#leyenda" class="text-indigo-600 hover:underline">Leyenda de Símbolos ISO</a>
+                    </li>
+                    <li class="font-semibold text-lg mt-4">
+                        <a href="#bibliografia" class="text-indigo-600 hover:underline">Bibliografía</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lg:w-3/4">
+                <!-- Leyenda de Símbolos ISO -->
+                <section id="leyenda" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4">Leyenda de Símbolos ISO</h2>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full border border-gray-300">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="px-4 py-2 border">Símbolo</th>
+                                    <th class="px-4 py-2 border">Nombre</th>
+                                    <th class="px-4 py-2 border">Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-4 py-2 border">((...)))</td>
+                                    <td class="px-4 py-2 border">Terminal</td>
+                                    <td class="px-4 py-2 border">Indica el inicio o fin del flujo (Óvalo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">[...]</td>
+                                    <td class="px-4 py-2 border">Proceso</td>
+                                    <td class="px-4 py-2 border">Representa una operación o actividad (Rectángulo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">{...}</td>
+                                    <td class="px-4 py-2 border">Decisión</td>
+                                    <td class="px-4 py-2 border">Punto de decisión o ramificación (Rombo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">[/...//]</td>
+                                    <td class="px-4 py-2 border">Entrada/Salida</td>
+                                    <td class="px-4 py-2 border">Representa datos o información (Paralelogramo)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">{{...}}</td>
+                                    <td class="px-4 py-2 border">Preparación</td>
+                                    <td class="px-4 py-2 border">Representa un ajuste o preparación (Hexágono)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">[[...]]</td>
+                                    <td class="px-4 py-2 border">Subproceso</td>
+                                    <td class="px-4 py-2 border">Representa un subproceso o módulo (Rectángulo con líneas dobles)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">[(...))]</td>
+                                    <td class="px-4 py-2 border">Documento</td>
+                                    <td class="px-4 py-2 border">Representa un documento o entregable (Rectángulo con base ondulada)</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-2 border">--></td>
+                                    <td class="px-4 py-2 border">Flujo</td>
+                                    <td class="px-4 py-2 border">Indica dirección del flujo entre elementos (Flecha)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Sección A: Autores Teóricos -->
+                <section id="autores" class="mb-12">
+                    <h2 class="text-3xl font-bold text-indigo-800 mb-6 pb-2 border-b-2 border-indigo-200">A. Autores Teóricos de Metodología del Diseño Industrial</h2>
+
+                    <!-- A1. Morris Asimow -->
+                    <div id="a1" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A1. Morris Asimow (1962): Introduction to Design</h3>
+                        <p class="mb-4">Morris Asimow fue un profesor estadounidense de ingeniería de sistemas que desarrolló una metodología de diseño centrada en dos grandes fases: planeación y morfología, y diseño detallado. Su enfoque sistemático está muy orientado a la ingeniería y a los aspectos técnicos del diseño.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Requerimiento de diseño}
+                                B --> C[[Fase I: Planeación y Morfología]]
+                                C --> C1{{Estudio de factibilidad}}
+                                C1 --> C2{{Diseño preliminar}}
+                                C2 --> C3{{Diseño detallado}}
+                                C3 --> D[[Fase II: Diseño Detallado]]
+                                D --> D1[Preparación del diseño]
+                                D1 --> D2[Diseño total de los subsistemas]
+                                D2 --> D3[Diseño total de los componentes]
+                                D3 --> D4[Diseño detallado de las partes]
+                                D4 --> D5[(Preparación de los dibujos de ensamble)]
+                                D5 --> D6[(Construcción experimental)]
+                                D6 --> D7[Programa de pruebas del producto]
+                                D7 --> D8{Análisis y predicción}
+                                D8 -->|No satisfactorio| D9[Rediseño]
+                                D9 --> D4
+                                D8 -->|Satisfactorio| E[[Ciclo de Producción]]
+                                E --> E1[Planeación para la producción]
+                                E1 --> E2[Planeación para la distribución]
+                                E2 --> E3[Planeación para el consumo]
+                                E3 --> E4[Planeación para el retiro]
+                                E4 --> F((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,F startEnd;
+                                class D1,D2,D3,D4,D7,D9,E1,E2,E3,E4 process;
+                                class B,D8 decision;
+                                class C1,C2,C3 preparation;
+                                class D5,D6 document;
+                                class C,D,E subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A2. Bruce Archer -->
+                    <div id="a2" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A2. Bruce Archer (1965): Systematic Method for Designers</h3>
+                        <p class="mb-4">Bruce Archer desarrolló su "método sistemático para diseñadores" en 1963 y fue un pionero en la formalización de los métodos de diseño. Propuso un enfoque sistemático dividido en tres fases principales: analítica, creativa y ejecutiva.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño}
+                                B --> C[[Fase Analítica]]
+                                C --> C1[/Recopilación de datos/]
+                                C1 --> C2[Ordenamiento de la información]
+                                C2 --> C3[Evaluación de la información]
+                                C3 --> C4[Definición de condicionantes]
+                                C4 --> C5[Estructuración y jerarquización]
+                                C5 --> C6[Formulación de especificaciones]
+                                C6 --> D[[Fase Creativa]]
+                                D --> D1[Desarrollo de conceptos]
+                                D1 --> D2[Evaluación de alternativas]
+                                D2 --> D3{Validación de conceptos}
+                                D3 -->|No viable| D1
+                                D3 -->|Viable| D4[Selección de solución óptima]
+                                D4 --> D5[Formalización de la idea]
+                                D5 --> E[[Fase Ejecutiva]]
+                                E --> E1[Comunicación y valoración crítica]
+                                E1 --> E2[(Documentación para producción)]
+                                E2 --> E3[Establecimiento de soluciones]
+                                E3 --> E4[Supervisión y evaluación]
+                                E4 --> F((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,F startEnd;
+                                class C2,C3,C4,C5,C6,D1,D2,D4,D5,E1,E3,E4 process;
+                                class B,D3 decision;
+                                class C1 data;
+                                class E2 document;
+                                class C,D,E subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A3. Edward Krick -->
+                    <div id="a3" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A3. Edward Krick (1969): Engineering Design</h3>
+                        <p class="mb-4">Edward V. Krick desarrolló una metodología de diseño enfocada en la ingeniería, detallada en su libro "Introducción a la ingeniería y al diseño en la ingeniería". Su enfoque es sistemático y orientado a la solución de problemas técnicos mediante un proceso riguroso.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño}
+                                B --> C{{Formulación del problema}}
+                                C --> C1[/Identificación del problema/]
+                                C1 --> C2[/Estado inicial/]
+                                C2 --> C3[/Estado final deseado/]
+                                C3 --> C4[Restricciones]
+                                C4 --> C5[Criterios]
+                                C5 --> D{{Análisis del problema}}
+                                D --> D1[Obtención de datos]
+                                D1 --> D2[Especificación de características]
+                                D2 --> D3[Modelos matemáticos]
+                                D3 --> E{{Búsqueda de soluciones}}
+                                E --> E1[Método científico]
+                                E1 --> E2[Analogías]
+                                E2 --> E3[Lluvia de ideas]
+                                E3 --> F{{Toma de decisiones}}
+                                F --> F1[Estimación de propiedades]
+                                F1 --> F2[Selección de criterios]
+                                F2 --> F3{Evaluación}
+                                F3 -->|No óptima| E
+                                F3 -->|Óptima| G{{Especificación de la solución}}
+                                G --> G1[(Elaboración de documentación)]
+                                G1 --> G2[Descripción detallada]
+                                G2 --> G3[Comunicación a interesados]
+                                G3 --> H((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,H startEnd;
+                                class C4,C5,D1,D2,D3,E1,E2,E3,F1,F2,G2,G3 process;
+                                class B,F3 decision;
+                                class C1,C2,C3 data;
+                                class C,D,E,F,G preparation;
+                                class G1 document;
+                        </div>
+                    </div>
+
+                    <!-- A4. Herbert Simon -->
+                    <div id="a4" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A4. Herbert Simon (1969): The Sciences of the Artificial</h3>
+                        <p class="mb-4">Herbert Simon, galardonado con el Premio Nobel, contribuyó a la teoría del diseño con su enfoque en la resolución de problemas y la toma de decisiones satisfactoria, reconociendo las limitaciones cognitivas y la complejidad de los desafíos de diseño.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema complejo}
+                                B --> C[Identificación del problema]
+                                C --> D[Representación del problema]
+                                D --> E[Espacio del problema]
+                                E --> F{¿Es posible simplificar?}
+                                F -->|Sí| G[Descomposición en subproblemas]
+                                F -->|No| H[Adoptar una visión holística]
+                                G --> I[[Resolver subproblemas]]
+                                H --> I
+                                I --> J{¿Es satisfactorio?}
+                                J -->|No| K[Ajustar expectativas]
+                                K --> D
+                                J -->|Sí| L[Implementar solución satisfactoria]
+                                L --> M((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,M startEnd;
+                                class C,D,E,G,H,K,L process;
+                                class B,F,J decision;
+                                class I subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A5. Abraham Moles -->
+                    <div id="a5" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A5. Abraham Moles (1969–1972): El diseño industrial y Teoría de los objetos</h3>
+                        <p class="mb-4">Abraham Moles desarrolló un enfoque sociocultural del diseño, considerando la relación entre los objetos, las personas y su entorno social, proponiendo un método que integra aspectos semióticos y funcionales.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Situación problemática}
+                                B --> C{{Análisis sociocultural}}
+                                C --> D[Estudio de necesidades sociales]
+                                D --> E[Valoración funcional y simbólica]
+                                E --> F[Definición de criterios micropsicológicos]
+                                F --> G{Orientación del proyecto}
+                                G -->|Funcional| H[Optimización funcional]
+                                G -->|Simbólica| I[Desarrollo de valor semiótico]
+                                H --> J[[Desarrollo técnico]]
+                                I --> J
+                                J --> K[Evaluación sociofuncional]
+                                K --> L{¿Satisface criterios?}
+                                L -->|No| M[Redefinición de requisitos]
+                                M --> E
+                                L -->|Sí| N[Implementación social del objeto]
+                                N --> O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,O startEnd;
+                                class D,E,F,H,I,K,M,N process;
+                                class B,G,L decision;
+                                class C preparation;
+                                class J subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A6. Christopher Jones -->
+                    <div id="a6" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A6. Christopher Jones (1970): Design Methods</h3>
+                        <p class="mb-4">John Christopher Jones fue uno de los pioneros del movimiento de métodos de diseño. Su libro "Métodos de Diseño" (1970) estableció una clasificación sistemática de los métodos basada en la naturaleza del pensamiento del diseñador: métodos de caja negra (intuición), caja transparente (racionalidad) y autorganización (retroalimentación).</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño}
+                                B --> C[Selección del método]
+                                C --> D{Tipo de problema}
+                                D -->|Intuitivo| E[[Caja Negra]]
+                                D -->|Racional| F[[Caja Transparente]]
+                                D -->|Complejo| G[[Sistema Autoorganizado]]
+                                E --> H[/Procesos creativos y subjetivos/]
+                                F --> I[/Análisis sistemático y objetivo/]
+                                G --> J[/Estrategia adaptativa e iterativa/]
+                                H --> K{Evaluación}
+                                I --> K
+                                J --> K
+                                K -->|No satisfactorio| C
+                                K -->|Satisfactorio| L[(Documentación)]
+                                L --> M[Solución de diseño]
+                                M --> N((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,N startEnd;
+                                class C,M process;
+                                class B,D,K decision;
+                                class H,I,J data;
+                                class E,F,G subProcess;
+                                class L document;
+                        </div>
+                    </div>
+
+                    <!-- A7. Victor Papanek -->
+                    <div id="a7" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A7. Victor Papanek (1971): Design for the Real World</h3>
+                        <p class="mb-4">Victor Papanek desarrolló un enfoque ético y social del diseño, enfatizando la responsabilidad del diseñador hacia los usuarios y el medio ambiente, promoviendo el diseño sustentable y socialmente comprometido.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad social identificada}
+                                B --> C[Análisis ético de la necesidad]
+                                C --> D{{Evaluación del impacto social y ambiental}}
+                                D --> E[Investigación etnográfica]
+                                E --> F[/Identificación de recursos locales/]
+                                F --> G[Desarrollo de conceptos responsables]
+                                G --> H{¿Beneficia a usuarios marginados?}
+                                H -->|No| I[Redefinir enfoque]
+                                I --> C
+                                H -->|Sí| J{¿Es ambientalmente sostenible?}
+                                J -->|No| K[Revisar materiales y procesos]
+                                K --> G
+                                J -->|Sí| L[[Implementación adecuada al contexto]]
+                                L --> M[Transferencia de conocimiento]
+                                M --> N[Evaluación del impacto real]
+                                N --> O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,O startEnd;
+                                class C,E,G,I,K,M,N process;
+                                class B,H,J decision;
+                                class F data;
+                                class D preparation;
+                                class L subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A8. Horst Rittel -->
+                    <div id="a8" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A8. Horst Rittel (1970s): Wicked Problems</h3>
+                        <p class="mb-4">Horst Rittel introdujo el concepto de "problemas perversos" (wicked problems), aquellos que son difíciles de definir, interdependientes y sin soluciones definitivas, lo que requiere enfoques de diseño participativos y deliberativos.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B[Identificación del problema perverso]
+                                B --> C{{Reconocimiento de la complejidad}}
+                                C --> D[Análisis de stakeholders]
+                                D --> E[Mapeo de interrelaciones]
+                                E --> F[[Deliberación participativa]]
+                                F --> G[Formulación colectiva del problema]
+                                G --> H[/Perspectivas diversas/]
+                                H --> I[Desarrollo de alternativas]
+                                I --> J{¿Hay consenso?}
+                                J -->|No| K[Reformulación del problema]
+                                K --> F
+                                J -->|Sí| L[Implementación provisional]
+                                L --> M{Evaluación continua}
+                                M -->|Requiere ajustes| N[Ajuste de solución]
+                                N --> M
+                                M -->|Satisfactorio por ahora| O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,O startEnd;
+                                class B,D,E,G,I,K,L,N process;
+                                class J,M decision;
+                                class H data;
+                                class C preparation;
+                                class F subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A9. Gui Bonsiepe -->
+                    <div id="a9" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A9. Gui Bonsiepe (1978): Metodología de Proyectación</h3>
+                        <p class="mb-4">Gui Bonsiepe es un diseñador alemán, teórico y educador, vinculado a la Escuela de Ulm. Su metodología de proyectación se enfoca en la planificación sistemática de actividades, dividiendo los problemas en subproblemas jerarquizados, con especial atención a los contextos de desarrollo.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema proyectual}
+                                B --> C[[Macroestructura del proceso]]
+                                C --> C1{{Estructuración del problema}}
+                                C1 --> C2{{Diseño o proyectación}}
+                                C2 --> C3{{Realización del proyecto}}
+                                C3 --> D[[Microestructura del proceso]]
+                                D --> D1[Localización de necesidad]
+                                D1 --> D2[Valoración de la necesidad]
+                                D2 --> D3[Análisis del problema proyectual]
+                                D3 --> D4[Definición del problema]
+                                D4 --> D5[Subdivisión en subproblemas]
+                                D5 --> D6[Jerarquización de subproblemas]
+                                D6 --> D7[/Análisis de soluciones existentes/]
+                                D7 --> D8[Desarrollo de alternativas]
+                                D8 --> D9{Verificación}
+                                D9 -->|No| D8
+                                D9 -->|Sí| D10[(Documentación técnica)]
+                                D10 --> D11[Implementación]
+                                D11 --> E[Seguimiento y evaluación]
+                                E --> F((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,F startEnd;
+                                class D1,D2,D3,D4,D5,D6,D8,D11,E process;
+                                class B,D9 decision;
+                                class D7 data;
+                                class C1,C2,C3 preparation;
+                                class D10 document;
+                                class C,D subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A10. Jordi Llovet -->
+                    <div id="a10" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A10. Jordi Llovet (1979): Teoría del Diseño Industrial</h3>
+                        <p class="mb-4">Jordi Llovet desarrolló una teoría del diseño industrial que integra aspectos ideológicos, políticos y económicos, analizando la dialéctica entre utilidad y estética en los objetos de diseño.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad de diseño}
+                                B --> C{{Análisis ideológico y cultural}}
+                                C --> D[Evaluación histórica]
+                                D --> E[Análisis de la demanda social]
+                                E --> F[Evaluación económica y política]
+                                F --> G[Definición de criterios polilógicos]
+                                G --> H{Enfoque principal}
+                                H -->|Estético| I[Desarrollo formal]
+                                H -->|Funcional| J[Desarrollo utilitario]
+                                I --> K[Integración dialéctica]
+                                J --> K
+                                K --> L{¿Cumple criterios plurales?}
+                                L -->|No| M[Redefinición]
+                                M --> G
+                                L -->|Sí| N[(Documentación)]
+                                N --> O[Implementación]
+                                O --> P((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,P startEnd;
+                                class D,E,F,G,I,J,K,M,O process;
+                                class B,H,L decision;
+                                class C preparation;
+                                class N document;
+                        </div>
+                    </div>
+
+                    <!-- A11. Bernd Löbach -->
+                    <div id="a11" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A11. Bernd Löbach (1981): Proceso Creativo de Diseño</h3>
+                        <p class="mb-4">Bernd Löbach es un diseñador industrial y teórico alemán. Su libro "Diseño Industrial: Bases para la configuración de los productos industriales" (1976) presenta una metodología enfocada en la solución de problemas mediante un proceso creativo estructurado en cuatro fases.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño}
+                                B --> C{{Fase de preparación}}
+                                C --> C1[Análisis del problema]
+                                C1 --> C2[Análisis de la necesidad]
+                                C2 --> C3[Análisis del contexto]
+                                C3 --> C4[/Recopilación de datos/]
+                                C4 --> D{{Fase de incubación}}
+                                D --> D1[Procesamiento mental]
+                                D1 --> D2[Generación inconsciente]
+                                D2 --> D3[Períodos de descanso]
+                                D3 --> E{{Fase de iluminación}}
+                                E --> E1[Generación de alternativas]
+                                E1 --> E2[Conceptualización]
+                                E2 --> E3[(Bocetaje de ideas)]
+                                E3 --> F{{Fase de verificación}}
+                                F --> F1[Evaluación de alternativas]
+                                F1 --> F2{Validación con usuarios}
+                                F2 -->|No| E
+                                F2 -->|Sí| F3[Refinamiento del diseño]
+                                F3 --> F4[(Prototipos y modelos)]
+                                F4 --> G[Solución final]
+                                G --> H((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,H startEnd;
+                                class C1,C2,C3,D1,D2,D3,E1,E2,F1,F3,G process;
+                                class B,F2 decision;
+                                class C4 data;
+                                class C,D,E,F preparation;
+                                class E3,F4 document;
+                        </div>
+                    </div>
+
+                    <!-- A12. Bruno Munari -->
+                    <div id="a12" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A12. Bruno Munari (1981): Metodología Proyectual</h3>
+                        <p class="mb-4">Bruno Munari (1907-1998) fue un artista, diseñador y escritor italiano. Su enfoque metódico para el diseño se popularizó a través de su libro "¿Cómo nacen los objetos?" (1981), donde expuso su metodología proyectual como un proceso lógico y secuencial para resolver problemas de diseño.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema}
+                                B --> C[Definición del problema]
+                                C --> D[Componentes del problema]
+                                D --> E[/Recopilación de datos/]
+                                E --> F[/Análisis de datos/]
+                                F --> G{{Creatividad}}
+                                G --> H{{Materiales y tecnología}}
+                                H --> I[Experimentación]
+                                I --> J[Modelos]
+                                J --> K{Verificación}
+                                K -->|No| I
+                                K -->|Sí| L[(Dibujos constructivos)]
+                                L --> M[Solución]
+                                M --> N((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,N startEnd;
+                                class C,D,I,J,M process;
+                                class B,K decision;
+                                class E,F data;
+                                class G,H preparation;
+                                class L document;
+                        </div>
+                    </div>
+
+                    <!-- A13. Don Norman -->
+                    <div id="a13" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A13. Don Norman (1988): The Design of Everyday Things</h3>
+                        <p class="mb-4">Don Norman popularizó el diseño centrado en el usuario, enfatizando la importancia de crear productos intuitivos y usables mediante el estudio de la interacción humano-producto y los principios psicológicos del diseño.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño}
+                                B --> C[Observación de usuarios]
+                                C --> D[/Identificación de necesidades reales/]
+                                D --> E[Análisis de modelos mentales]
+                                E --> F{{Aplicación de principios HCD}}
+                                F --> G1[Desarrollar visibilidad]
+                                F --> G2[Crear affordances]
+                                F --> G3[Diseñar restricciones]
+                                F --> G4[Incorporar mappings naturales]
+                                F --> G5[Proporcionar feedback]
+                                G1 --> H[Desarrollo de conceptos]
+                                G2 --> H
+                                G3 --> H
+                                G4 --> H
+                                G5 --> H
+                                H --> I[Prototipado]
+                                I --> J[Pruebas de usabilidad]
+                                J --> K{¿Es usable e intuitivo?}
+                                K -->|No| L[Rediseño]
+                                L --> F
+                                K -->|Sí| M[Refinamiento]
+                                M --> N[Solución final]
+                                N --> O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,O startEnd;
+                                class C,E,G1,G2,G3,G4,G5,H,I,J,L,M,N process;
+                                class B,K decision;
+                                class D data;
+                                class F preparation;
+                        </div>
+                    </div>
+
+                    <!-- A14. Oscar Olea y Carlos González -->
+                    <div id="a14" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A14. Oscar Olea y Carlos González (1995): Modelo Diana</h3>
+                        <p class="mb-4">Oscar Olea y Carlos González desarrollaron el "Modelo Diana", una metodología latinoamericana que integra análisis estructurado de la demanda y factores contextuales en el proceso de diseño, con énfasis en la aplicación al contexto local.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Demanda de diseño}
+                                B --> C[Configuración de la demanda]
+                                C --> D[/Definición de ubicación, destino, economía/]
+                                D --> E[Organización de la información]
+                                E --> F[Definición del vector analítico]
+                                F --> G[Definición de estrategia]
+                                G --> H[Definición de áreas según demanda]
+                                H --> I[Acoplamiento información-áreas]
+                                I --> J[Asignación de probabilidad]
+                                J --> K[Asignación factor acumulativo]
+                                K --> L[Establecimiento de restricciones]
+                                L --> M[Calificación binaria de áreas]
+                                M --> N[Establecimiento límite inferior]
+                                N --> O[/Transferencia de datos/]
+                                O --> P{Evaluación computarizada}
+                                P -->|No óptimo| Q[Revisión de parámetros]
+                                Q --> F
+                                P -->|Óptimo| R[(Documentación técnica)]
+                                R --> S[Implementación]
+                                S --> T((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,T startEnd;
+                                class C,E,F,G,H,I,J,K,L,M,N,Q,S process;
+                                class B,P decision;
+                                class D,O data;
+                                class R document;
+                        </div>
+                    </div>
+
+                    <!-- A15. Klaus Krippendorff -->
+                    <div id="a15" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A15. Klaus Krippendorff (2006): The Semantic Turn</h3>
+                        <p class="mb-4">Klaus Krippendorff desarrolló el enfoque del "giro semántico" en el diseño, que enfatiza el significado y la interpretación que los usuarios dan a los productos. Su metodología se centra en el diseño centrado en el ser humano y en cómo los objetos adquieren significado a través de la interacción.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Desafío de diseño}
+                                B --> C[Análisis de significados actuales]
+                                C --> D[/Recopilación de datos contextuales/]
+                                D --> E[Observación participativa]
+                                E --> F[[Análisis de discurso]]
+                                F --> F1[Narrativas de uso]
+                                F1 --> F2[Redes de significado]
+                                F2 --> F3[Metáforas y modelos mentales]
+                                F3 --> G{{Interpretación}}
+                                G --> G1[Creación de significados]
+                                G1 --> G2[Negociación social]
+                                G2 --> H[Desarrollo de conceptos]
+                                H --> I{Validación participativa}
+                                I -->|No adecuado| G1
+                                I -->|Adecuado| J[Diseño de interfaces]
+                                J --> K[[Desarrollo de artefactos]]
+                                K --> K1[Prototipos experienciales]
+                                K1 --> K2[(Documentación del proceso)]
+                                K2 --> L{Evaluación en contexto}
+                                L -->|Requiere ajustes| K
+                                L -->|Satisfactorio| M[Implementación]
+                                M --> N((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,N startEnd;
+                                class C,E,F1,F2,F3,G1,G2,H,J,K1,M process;
+                                class B,I,L decision;
+                                class D data;
+                                class G preparation;
+                                class K2 document;
+                                class F,K subProcess;
+                        </div>
+                    </div>
+
+                    <!-- A16. Nigel Cross -->
+                    <div id="a16" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">A16. Nigel Cross (2006): Designerly Ways of Knowing</h3>
+                        <p class="mb-4">Nigel Cross exploró los modos cognitivos distintivos de los diseñadores, identificando el pensamiento de diseño como una "tercera cultura" junto a las ciencias y las humanidades, con su propio proceso de conocimiento y resolución de problemas.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema de diseño mal definido}
+                                B --> C[Formulación del problema]
+                                C --> D[Co-evolución de problema y solución]
+                                D --> E[/Exploración de precedentes/]
+                                E --> F[[Estrategias cognitivas de diseño]]
+                                F --> F1[Pensamiento visual]
+                                F1 --> F2[Razonamiento abductivo]
+                                F2 --> F3[Pensamiento constructivo]
+                                F3 --> G{¿Reformular el problema?}
+                                G -->|Sí| H[Reformulación]
+                                H --> C
+                                G -->|No| I[Generación de conceptos]
+                                I --> J[Desarrollo de modelos]
+                                J --> K[(Representación de diseño)]
+                                K --> L{Evaluación reflexiva}
+                                L -->|No satisfactorio| M[Refinamiento]
+                                M --> I
+                                L -->|Satisfactorio| N[Formalización]
+                                N --> O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,O startEnd;
+                                class C,D,F1,F2,F3,H,I,J,M,N process;
+                                class B,G,L decision;
+                                class E data;
+                                class K document;
+                                class F subProcess;
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Sección B: Metodologías Generales -->
+                <section id="metodologias" class="mb-12">
+                    <h2 class="text-3xl font-bold text-indigo-800 mb-6 pb-2 border-b-2 border-indigo-200">B. Metodologías Generales del Diseño Industrial</h2>
+
+                    <!-- B1. TRIZ -->
+                    <div id="b1" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B1. TRIZ (1946)</h3>
+                        <p class="mb-4">TRIZ (Teoría para Resolver Problemas de Inventiva) es una metodología desarrollada por Genrich Altshuller basada en el análisis de patentes para identificar patrones en la resolución de problemas técnicos. Proporciona herramientas sistemáticas para abordar contradicciones y encontrar soluciones innovadoras.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema técnico}
+                                B --> C[/Identificación del problema/]
+                                C --> D{{Análisis del sistema}}
+                                D --> E[Formulación de la contradicción]
+                                E --> F{Tipo de contradicción}
+                                F -->|Técnica| G[[Matriz de contradicciones]]
+                                F -->|Física| H[[Principios de separación]]
+                                G --> I[Aplicación de principios inventivos]
+                                H --> J[Aplicación de separación]
+                                I --> K[Generación de conceptos]
+                                J --> K
+                                K --> L{Evaluación de conceptos}
+                                L -->|No óptimo| M[Reformulación]
+                                M --> E
+                                L -->|Óptimo| N[Solución final]
+                                N --> O[Adaptación específica]
+                                O --> P((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,P startEnd;
+                                class E,I,J,K,M,N,O process;
+                                class B,F,L decision;
+                                class C data;
+                                class D preparation;
+                                class G,H subProcess;
+                        </div>
+                    </div>
+
+                    <!-- B2. Método SCAMPER -->
+                    <div id="b2" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B2. Método SCAMPER (1971)</h3>
+                        <p class="mb-4">SCAMPER es una técnica de generación de ideas desarrollada por Bob Eberle basada en un conjunto de verbos que estimulan el pensamiento lateral para modificar productos o servicios existentes y crear soluciones innovadoras.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B[Producto o servicio existente]
+                                B --> C{{Aplicación del método SCAMPER}}
+                                C --> D1[S: Sustituir componentes]
+                                C --> D2[C: Combinar con otros elementos]
+                                C --> D3[A: Adaptar a otros contextos]
+                                C --> D4[M: Modificar/Magnificar/Minimizar]
+                                C --> D5[P: Proponer otros usos]
+                                C --> D6[E: Eliminar elementos]
+                                C --> D7[R: Reordenar/Invertir]
+                                D1 --> E[/Registro de ideas generadas/]
+                                D2 --> E
+                                D3 --> E
+                                D4 --> E
+                                D5 --> E
+                                D6 --> E
+                                D7 --> E
+                                E --> F[Evaluación de propuestas]
+                                F --> G{Selección de ideas}
+                                G --> H[Desarrollo de conceptos]
+                                H --> I{Validación}
+                                I -->|No viable| J[Refinamiento]
+                                J --> G
+                                I -->|Viable| K[Implementación]
+                                K --> L((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,L startEnd;
+                                class B,D1,D2,D3,D4,D5,D6,D7,F,H,J,K process;
+                                class G,I decision;
+                                class E data;
+                                class C preparation;
+                        </div>
+                    </div>
+
+                    <!-- B3. Diseño Universal -->
+                    <div id="b3" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B3. Diseño Universal (1970s-1990s)</h3>
+                        <p class="mb-4">El Diseño Universal, desarrollado por Ronald Mace, busca crear productos y entornos utilizables por todas las personas sin necesidad de adaptación. Se basa en siete principios que promueven la accesibilidad, usabilidad y equidad para usuarios con diversas capacidades.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad de diseño inclusivo}
+                                B --> C[/Análisis de diversidad de usuarios/]
+                                C --> D{{Aplicación de principios}}
+                                D --> D1[Uso equitativo]
+                                D --> D2[Flexibilidad en el uso]
+                                D --> D3[Uso simple e intuitivo]
+                                D --> D4[Información perceptible]
+                                D --> D5[Tolerancia al error]
+                                D --> D6[Bajo esfuerzo físico]
+                                D --> D7[Tamaño y espacio adecuados]
+                                D1 --> E[Desarrollo de conceptos]
+                                D2 --> E
+                                D3 --> E
+                                D4 --> E
+                                D5 --> E
+                                D6 --> E
+                                D7 --> E
+                                E --> F[Evaluación con usuarios diversos]
+                                F --> G{¿Cumple los 7 principios?}
+                                G -->|No| H[Rediseño]
+                                H --> D
+                                G -->|Sí| I[Refinamiento]
+                                I --> J[Implementación]
+                                J --> K[Evaluación post-implementación]
+                                K --> L((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,L startEnd;
+                                class D1,D2,D3,D4,D5,D6,D7,E,F,H,I,J,K process;
+                                class B,G decision;
+                                class C data;
+                                class D preparation;
+                        </div>
+                    </div>
+
+                    <!-- B4. Human-Centered Design -->
+                    <div id="b4" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B4. Human-Centered Design (1980s-1990s)</h3>
+                        <p class="mb-4">Human-Centered Design (HCD) es un enfoque popularizado por IDEO que coloca a las personas en el centro del proceso de diseño. Se enfoca en comprender profundamente las necesidades, deseos y limitaciones de los usuarios para crear soluciones que resuenen con ellos de manera significativa.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Desafío de diseño}
+                                B --> C[[Fase de Inspiración]]
+                                C --> C1[Investigación contextual]
+                                C1 --> C2[Observación etnográfica]
+                                C2 --> C3[Entrevistas a usuarios]
+                                C3 --> C4[/Inmersión en experiencias/]
+                                C4 --> D[[Fase de Ideación]]
+                                D --> D1[Síntesis de hallazgos]
+                                D1 --> D2[(Mapas de empatía)]
+                                D2 --> D3[(Journey maps)]
+                                D3 --> D4[Generación de insights]
+                                D4 --> D5[Lluvia de ideas]
+                                D5 --> D6[Creación de conceptos]
+                                D6 --> E[[Fase de Implementación]]
+                                E --> E1[Prototipado rápido]
+                                E1 --> E2[Pruebas con usuarios]
+                                E2 --> E3{Validación}
+                                E3 -->|No efectivo| E4[Iteración]
+                                E4 --> D5
+                                E3 -->|Efectivo| E5[Planificación]
+                                E5 --> E6[Implementación]
+                                E6 --> E7[Evaluación de impacto]
+                                E7 --> F((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,F startEnd;
+                                class C1,C2,C3,D1,D4,D5,D6,E1,E2,E4,E5,E6,E7 process;
+                                class B,E3 decision;
+                                class C4 data;
+                                class D2,D3 document;
+                                class C,D,E subProcess;
+                        </div>
+                    </div>
+
+                    <!-- B5. Diseño Sostenible -->
+                    <div id="b5" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B5. Diseño Sostenible (1980s-1990s)</h3>
+                        <p class="mb-4">El Diseño Sostenible busca crear productos y sistemas que satisfagan las necesidades del presente sin comprometer la capacidad de las generaciones futuras para satisfacer sus propias necesidades, integrando consideraciones ambientales, sociales y económicas.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad de diseño}
+                                B --> C{{Análisis del ciclo de vida}}
+                                C --> D1[Extracción de materias primas]
+                                C --> D2[Producción y manufactura]
+                                C --> D3[Distribución]
+                                C --> D4[Uso y mantenimiento]
+                                C --> D5[Fin de vida útil]
+                                D1 --> E[/Evaluación de impactos/]
+                                D2 --> E
+                                D3 --> E
+                                D4 --> E
+                                D5 --> E
+                                E --> F[Definición de estrategias sostenibles]
+                                F --> G1[Selección de materiales sostenibles]
+                                F --> G2[Eficiencia energética]
+                                F --> G3[Minimización de residuos]
+                                F --> G4[Durabilidad y reparabilidad]
+                                F --> G5[Diseño para desmontaje]
+                                G1 --> H[Desarrollo de conceptos]
+                                G2 --> H
+                                G3 --> H
+                                G4 --> H
+                                G5 --> H
+                                H --> I[Evaluación con triple cuenta de resultados]
+                                I --> J{¿Cumple criterios sostenibles?}
+                                J -->|No| K[Rediseño]
+                                K --> F
+                                J -->|Sí| L[Implementación]
+                                L --> M[Monitoreo de impacto real]
+                                M --> N((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,N startEnd;
+                                class D1,D2,D3,D4,D5,F,G1,G2,G3,G4,G5,H,I,K,L,M process;
+                                class B,J decision;
+                                class E data;
+                                class C preparation;
+                        </div>
+                    </div>
+
+                    <!-- B6. Ecodiseño -->
+                    <div id="b6" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B6. Ecodiseño (1990s)</h3>
+                        <p class="mb-4">El Ecodiseño es un enfoque específico del diseño sostenible que integra aspectos ambientales en el desarrollo de productos, con el objetivo de reducir su impacto ambiental a lo largo de todo su ciclo de vida, desde la selección de materiales hasta su disposición final.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Reto de diseño de producto}
+                                B --> C[/Análisis de producto existente/]
+                                C --> D[[Evaluación de Ciclo de Vida (LCA)]]
+                                D --> D1[Inventario de materiales]
+                                D1 --> D2[Análisis de procesos]
+                                D2 --> D3[Evaluación de impactos]
+                                D3 --> D4[Interpretación de resultados]
+                                D4 --> E[Identificación de puntos críticos]
+                                E --> F{{Estrategias de Ecodiseño}}
+                                F --> F1[Selección de materiales de bajo impacto]
+                                F --> F2[Reducción de uso de materiales]
+                                F --> F3[Optimización de técnicas de producción]
+                                F --> F4[Optimización del sistema de distribución]
+                                F --> F5[Reducción de impacto durante el uso]
+                                F --> F6[Optimización de vida útil]
+                                F --> F7[Optimización del fin de vida]
+                                F1 --> G[Desarrollo de conceptos]
+                                F2 --> G
+                                F3 --> G
+                                F4 --> G
+                                F5 --> G
+                                F6 --> G
+                                F7 --> G
+                                G --> H[Evaluación ambiental comparativa]
+                                H --> I{¿Mejora ambiental significativa?}
+                                I -->|No| J[Refinamiento]
+                                J --> F
+                                I -->|Sí| K[Desarrollo detallado]
+                                K --> L[Implementación y producción]
+                                L --> M[Comunicación ambiental]
+                                M --> N((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,N startEnd;
+                                class D1,D2,D3,D4,E,F1,F2,F3,F4,F5,F6,F7,G,H,J,K,L,M process;
+                                class B,I decision;
+                                class C data;
+                                class F preparation;
+                                class D subProcess;
+                        </div>
+                    </div>
+
+                    <!-- B7. Biomímesis -->
+                    <div id="b7" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B7. Biomímesis (1997)</h3>
+                        <p class="mb-4">La Biomímesis, popularizada por Janine Benyus, es una metodología que busca soluciones sostenibles emulando los patrones y estrategias de la naturaleza. Estudia los modelos, sistemas y elementos naturales para inspirar el diseño de productos y procesos más eficientes y armónicos con el entorno.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Desafío de diseño}
+                                B --> C[Definición de la función del diseño]
+                                C --> D{Enfoque}
+                                D -->|Desafío a biología| E[Reformulación como reto biológico]
+                                D -->|Biología a diseño| F[Observación de fenómenos naturales]
+                                E --> G[/Búsqueda de soluciones biológicas/]
+                                G --> H{{Descubrimiento de modelos naturales}}
+                                F --> H
+                                H --> I[Análisis de principios biológicos]
+                                I --> J[Abstracción de estrategias naturales]
+                                J --> K[Traslación a principios de diseño]
+                                K --> L[Generación de conceptos]
+                                L --> M[Evaluación técnica y ambiental]
+                                M --> N{¿Funciona y es sostenible?}
+                                N -->|No| O[Refinamiento]
+                                O --> K
+                                N -->|Sí| P[Desarrollo detallado]
+                                P --> Q[Implementación]
+                                Q --> R[Evaluación del rendimiento]
+                                R --> S((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,S startEnd;
+                                class C,E,F,I,J,K,L,M,O,P,Q,R process;
+                                class B,D,N decision;
+                                class G data;
+                                class H preparation;
+                        </div>
+                    </div>
+
+                    <!-- B8. Design Thinking -->
+                    <div id="b8" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B8. Design Thinking (2000s)</h3>
+                        <p class="mb-4">El Design Thinking es una metodología centrada en el usuario que enfatiza la empatía, la ideación, la experimentación y la iteración. Popularizada por IDEO y la d.school de Stanford, proporciona un enfoque estructurado para la innovación que ha ganado amplia aceptación en las últimas décadas.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Desafío de diseño}
+                                B --> C{{Empatizar}}
+                                C --> C1[Investigación cualitativa]
+                                C1 --> C2[Observación]
+                                C2 --> C3[Entrevistas]
+                                C3 --> C4[/Inmersión en contexto de usuario/]
+                                C4 --> D{{Definir}}
+                                D --> D1[Interpretación de hallazgos]
+                                D1 --> D2[(Mapas de empatía)]
+                                D2 --> D3[Definición de insights]
+                                D3 --> D4[Point of View POV]
+                                D4 --> E{{Idear}}
+                                E --> E1[Generación de ideas]
+                                E1 --> E2[Pensamiento divergente]
+                                E2 --> E3[Técnicas creativas]
+                                E3 --> E4{Evaluación de ideas}
+                                E4 -->|No viable| E1
+                                E4 -->|Viable| F{{Prototipar}}
+                                F --> F1[Prototipado rápido]
+                                F1 --> F2[Visualización]
+                                F2 --> F3[Mock-ups]
+                                F3 --> G{{Evaluar}}
+                                G --> G1[Pruebas con usuarios]
+                                G1 --> G2[Retroalimentación]
+                                G2 --> G3{¿Solución adecuada?}
+                                G3 -->|No| H[Iteración]
+                                H --> C
+                                G3 -->|Sí| I[Implementación]
+                                I --> J((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                                class A,J startEnd;
+                                class C1,C2,C3,D1,D3,D4,E1,E2,E3,F1,F2,F3,G1,G2,H,I process;
+                                class B,E4,G3 decision;
+                                class C4 data;
+                                class C,D,E,F,G preparation;
+                                class D2 document;
+                        </div>
+                    </div>
+
+                    <!-- B9. Diseño Sistémico -->
+                    <div id="b9" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B9. Diseño Sistémico (2000s)</h3>
+                        <p class="mb-4">El Diseño Sistémico aplica el pensamiento sistémico para abordar problemas complejos, considerando las interrelaciones entre componentes y buscando crear soluciones holísticas que generen valor en múltiples niveles del sistema.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Problema complejo multidimensional}
+                                B --> C[Definición del sistema]
+                                C --> D[/Mapeo del sistema actual/]
+                                D --> E[Identificación de actores y relaciones]
+                                E --> F[Análisis de flujos de materia y energía]
+                                F --> G[Identificación de retroalimentaciones]
+                                G --> H[Detección de ineficiencias y oportunidades]
+                                H --> I{{Diseño de intervenciones sistémicas}}
+                                I --> J[Creación de relaciones innovadoras]
+                                J --> K[Diseño de ciclos cerrados]
+                                K --> L[Propuesta de cambios estructurales]
+                                L --> M[Evaluación de impactos en todo el sistema]
+                                M --> N{¿Genera valor múltiple?}
+                                N -->|No| O[Refinamiento]
+                                O --> I
+                                N -->|Sí| P[Implementación por etapas]
+                                P --> Q[Monitoreo de efectos emergentes]
+                                Q --> R{¿Funciona como sistema?}
+                                R -->|No| S[Ajuste adaptativo]
+                                S --> Q
+                                R -->|Sí| T[Escalamiento]
+                                T --> U((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,U startEnd;
+                                class C,E,F,G,H,J,K,L,M,O,P,Q,S,T process;
+                                class B,N,R decision;
+                                class D data;
+                                class I preparation;
+                        </div>
+                    </div>
+
+                    <!-- B10. Diseño Ágil -->
+                    <div id="b10" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B10. Diseño Ágil (2010s)</h3>
+                        <p class="mb-4">El Diseño Ágil adapta los principios de las metodologías ágiles de desarrollo de software al diseño industrial, enfatizando ciclos iterativos cortos, colaboración multidisciplinaria, flexibilidad ante cambios y entrega continua de valor.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B[Visión del producto]
+                                B --> C[Creación del backlog de diseño]
+                                C --> D{{Planificación del sprint}}
+                                D --> E[Selección de funcionalidades a diseñar]
+                                E --> F[[Sprint de diseño]]
+                                F --> F1[Investigación rápida]
+                                F1 --> F2[Ideación colaborativa]
+                                F2 --> F3[Prototipado]
+                                F3 --> F4[Pruebas con usuarios]
+                                F4 --> G[Revisión del sprint]
+                                G --> H{¿Cumple requisitos?}
+                                H -->|No| I[Ajustes]
+                                I --> F
+                                H -->|Sí| J[Integración con desarrollo]
+                                J --> K[Retrospectiva del sprint]
+                                K --> L{¿Producto completo?}
+                                L -->|No| M[Actualización del backlog]
+                                M --> D
+                                L -->|Sí| N[Lanzamiento]
+                                N --> O[Evaluación continua]
+                                O --> P((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                                class A,P startEnd;
+                                class B,C,E,F1,F2,F3,F4,G,I,J,K,M,N,O process;
+                                class H,L decision;
+                                class D preparation;
+                                class F subProcess;
+                        </div>
+                    </div>
+
+                    <!-- B11. Diseño Inclusivo -->
+                    <div id="b11" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B11. Diseño Inclusivo (2010s)</h3>
+                        <p class="mb-4">El Diseño Inclusivo, promovido por Microsoft y otras organizaciones, busca diseñar productos y servicios que sean utilizables por la mayor diversidad de personas posible, reconociendo la exclusión como una falla del diseño, no de las personas.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad de diseño para diversidad}
+                                B --> C[Reconocimiento de exclusión]
+                                C --> D[/Investigación de diversos usuarios/]
+                                D --> E[Identificación de limitaciones situacionales]
+                                E --> F[Mapeo de capacidades y contextos]
+                                F --> G[Definición de personas diversas]
+                                G --> H{{Diseño con principios inclusivos}}
+                                H --> H1[Proporcionar experiencias comparables]
+                                H --> H2[Considerar el contexto de uso]
+                                H --> H3[Ofrecer elección y control]
+                                H --> H4[Priorizar funcionalidad esencial]
+                                H1 --> I[Ideación con equipos diversos]
+                                H2 --> I
+                                H3 --> I
+                                H4 --> I
+                                I --> J[Prototipado inclusivo]
+                                J --> K[Evaluación con usuarios diversos]
+                                K --> L{¿Es inclusivo?}
+                                L -->|No| M[Rediseño]
+                                M --> H
+                                L -->|Sí| N[Documentación de decisiones inclusivas]
+                                N --> O[Implementación]
+                                O --> P[Monitoreo de uso real]
+                                P --> Q((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,Q startEnd;
+                                class C,E,F,G,H1,H2,H3,H4,I,J,K,M,N,O,P process;
+                                class B,L decision;
+                                class D data;
+                                class H preparation;
+                        </div>
+                    </div>
+
+                    <!-- B12. Diseño Circular -->
+                    <div id="b12" class="mb-12 p-6 bg-white rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B12. Diseño Circular (2010s)</h3>
+                        <p class="mb-4">El Diseño Circular aplica los principios de la economía circular al proceso de diseño, buscando eliminar el concepto de desecho y mantener los materiales y productos en uso, regenerando los sistemas naturales y creando valor a largo plazo.</p>
+                        <div class="mermaid">
+                            flowchart TD
+                                A((Inicio)) --> B{Necesidad de producto/servicio}
+                                B --> C[/Análisis de ciclos de recursos/]
+                                C --> D{{Estrategias de diseño circular}}
+                                D --> D1[Diseño para durabilidad]
+                                D --> D2[Diseño para mantenimiento]
+                                D --> D3[Diseño para reutilización]
+                                D --> D4[Diseño para remanufactura]
+                                D --> D5[Diseño para reciclaje]
+                                D --> D6[Diseño de servicios circulares]
+                                D1 --> E[Selección de materiales]
+                                D2 --> E
+                                D3 --> E
+                                D4 --> E
+                                D5 --> E
+                                D6 --> E
+                                E --> F[Diseño para desensamblaje]
+                                F --> G[Desarrollo de conceptos]
+                                G --> H[Evaluación de circularidad]
+                                H --> I{¿Cierra los ciclos?}
+                                I -->|No| J[Rediseño]
+                                J --> D
+                                I -->|Sí| K[Prototipado y pruebas]
+                                K --> L[Desarrollo de modelo de negocio circular]
+                                L --> M[Implementación]
+                                M --> N[Monitoreo de flujos de materiales]
+                                N --> O((Fin))
+                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
+                                class A,O startEnd;
+                                class D1,D2,D3,D4,D5,D6,E,F,G,H,J,K,L,M,N process;
+                                class B,I decision;
+                                class C data;
+                                class D preparation;
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Bibliografía -->
+                <section id="bibliografia" class="p-6 bg-white rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-indigo-700 mb-4">Bibliografía</h2>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Archer, L. B. (1965). <em>Systematic method for designers</em>. Council of Industrial Design.</li>
+                        <li>Asimow, M. (1962). <em>Introduction to design</em>. Prentice-Hall.</li>
+                        <li>Bonsiepe, G. (1978). <em>Teoría y práctica del diseño industrial: Elementos para una manualística crítica</em>. Gustavo Gili.</li>
+                        <li>Cross, N. (2006). <em>Designerly ways of knowing</em>. Springer.</li>
+                        <li>Jones, J. C. (1970). <em>Design methods: Seeds of human futures</em>. Wiley-Interscience.</li>
+                        <li>Krick, E. V. (1969). <em>An introduction to engineering and engineering design</em>. John Wiley & Sons.</li>
+                        <li>Krippendorff, K. (2006). <em>The semantic turn: A new foundation for design</em>. CRC Press.</li>
+                        <li>Llovet, J. (1979). <em>Teoría del diseño industrial</em>. Gustavo Gili.</li>
+                        <li>Löbach, B. (1981). <em>Diseño industrial: Bases para la configuración de los productos industriales</em>. Gustavo Gili.</li>
+                        <li>Munari, B. (1983). <em>¿Cómo nacen los objetos?</em>. Gustavo Gili.</li>
+                        <li>Norman, D. (1988). <em>The design of everyday things</em>. Basic Books.</li>
+                        <li>Papanek, V. (1971). <em>Design for the real world: Human ecology and social change</em>. Thames & Hudson.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'default',
+                flowchart: {
+                    useMaxWidth: false,
+                    htmlLabels: true,
+                    curve: 'basis'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
