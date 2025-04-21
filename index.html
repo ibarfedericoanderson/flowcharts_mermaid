@@ -996,56 +996,62 @@
                     </div>
 
                     <!-- B6. Ecodiseño -->
-                    <div id="b6" class="mb-12 p-6 bg-white rounded-lg shadow-md">
-                        <h3 class="text-2xl font-bold text-indigo-700 mb-2">B6. Ecodiseño (1990s)</h3>
-                        <p class="mb-4">El Ecodiseño es un enfoque específico del diseño sostenible que integra aspectos ambientales en el desarrollo de productos, con el objetivo de reducir su impacto ambiental a lo largo de todo su ciclo de vida, desde la selección de materiales hasta su disposición final.</p>
-                        <div class="mermaid">
+                <div id="B6" class="methodology-section">
+                    <h3 class="text-2xl font-bold mb-4 text-green-600 dark:text-green-400">B6. Ecodiseño (1990s): Diseño con Enfoque Ambiental</h3>
+                    <p class="mb-6 text-gray-700 dark:text-gray-300">
+                        El Ecodiseño es una metodología que integra aspectos ambientales en el desarrollo de productos, con el objetivo de reducir su impacto ambiental a lo largo de todo su ciclo de vida, desde la extracción de materias primas hasta su disposición final.
+                    </p>
+                    <div class="diagram-container">
+                        <pre class="mermaid">
                             flowchart TD
-                                A((Inicio)) --> B{Reto de diseño de producto}
-                                B --> C[/Análisis de producto existente/]
-                                C --> D[[Evaluación de Ciclo de Vida (LCA)]]
-                                D --> D1[Inventario de materiales]
-                                D1 --> D2[Análisis de procesos]
-                                D2 --> D3[Evaluación de impactos]
-                                D3 --> D4[Interpretación de resultados]
-                                D4 --> E[Identificación de puntos críticos]
-                                E --> F{{Estrategias de Ecodiseño}}
-                                F --> F1[Selección de materiales de bajo impacto]
-                                F --> F2[Reducción de uso de materiales]
-                                F --> F3[Optimización de técnicas de producción]
-                                F --> F4[Optimización del sistema de distribución]
-                                F --> F5[Reducción de impacto durante el uso]
-                                F --> F6[Optimización de vida útil]
-                                F --> F7[Optimización del fin de vida]
-                                F1 --> G[Desarrollo de conceptos]
-                                F2 --> G
-                                F3 --> G
-                                F4 --> G
-                                F5 --> G
-                                F6 --> G
-                                F7 --> G
-                                G --> H[Evaluación ambiental comparativa]
-                                H --> I{¿Mejora ambiental significativa?}
-                                I -->|No| J[Refinamiento]
-                                J --> F
-                                I -->|Sí| K[Desarrollo detallado]
-                                K --> L[Implementación y producción]
-                                L --> M[Comunicación ambiental]
-                                M --> N((Fin))
-                                classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
-                                classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
-                                classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
-                                classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
-                                classDef preparation fill:#dbeafe,stroke:#3b82f6,color:#1e40af,stroke-width:1px;
-                                classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
-                                class A,N startEnd;
-                                class D1,D2,D3,D4,E,F1,F2,F3,F4,F5,F6,F7,G,H,J,K,L,M process;
-                                class B,I decision;
-                                class C data;
-                                class F preparation;
-                                class D subProcess;
-                        </div>
+                            A((Inicio)) --> B{Necesidad de producto ecológico}
+                            B --> C[Organización del proyecto ecodiseño]
+                            C --> D[Selección de producto a rediseñar]
+                            D --> E[["Análisis del Ciclo de Vida (ACV)"]]
+                            E --> E1[Definición de objetivos y alcance]
+                            E1 --> E2[Inventario del ciclo de vida]
+                            E2 --> E3[Evaluación de impacto]
+                            E3 --> E4[Interpretación de resultados]
+                            E4 --> F[/Identificación de puntos críticos ambientales/]
+                            F --> G[["Estrategias de Ecodiseño"]]
+                            G --> G1[Selección de materiales de bajo impacto]
+                            G1 --> G2[Reducción de materiales]
+                            G2 --> G3[Optimización de técnicas de producción]
+                            G3 --> G4[Optimización del sistema de distribución]
+                            G4 --> G5[Reducción del impacto durante el uso]
+                            G5 --> G6[Optimización de vida útil]
+                            G6 --> G7[Optimización del sistema de fin de vida]
+                            G7 --> H[Desarrollo de conceptos ecodiseño]
+                            H --> I[Evaluación ambiental de conceptos]
+                            I --> J{Mejora ambiental significativa}
+                            J -->|No| G
+                            J -->|Sí| K[Desarrollo detallado]
+                            K --> L[(Documentación técnica y ambiental)]
+                            L --> M[Comunicación ambiental]
+                            M --> N[Seguimiento ambiental del producto]
+                            N --> O((Fin))
+                            
+                            classDef startEnd fill:#3b82f6,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+                            classDef process fill:#d1fae5,stroke:#10b981,color:#064e3b,stroke-width:1px;
+                            classDef decision fill:#fef3c7,stroke:#f59e0b,color:#78350f,stroke-width:1px;
+                            classDef data fill:#e0e7ff,stroke:#6366f1,color:#3730a3,stroke-width:1px;
+                            classDef document fill:#fee2e2,stroke:#ef4444,color:#7f1d1d,stroke-width:1px;
+                            classDef subProcess fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:1px;
+                            
+                            class A,O startEnd;
+                            class C,D,E1,E2,E3,E4,G1,G2,G3,G4,G5,G6,G7,H,I,K,M,N process;
+                            class B,J decision;
+                            class F data;
+                            class L document;
+                            class E,G subProcess;
+                        </pre>
                     </div>
+                    <div class="mt-4 flex justify-end">
+                        <a href="#indice" class="text-blue-500 hover:underline flex items-center">
+                            <i class="fas fa-arrow-up mr-2"></i> Volver al índice
+                        </a>
+                    </div>
+                </div>
 
                     <!-- B7. Biomímesis -->
                     <div id="b7" class="mb-12 p-6 bg-white rounded-lg shadow-md">
